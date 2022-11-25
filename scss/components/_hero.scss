@@ -1,0 +1,98 @@
+.hero {
+    background-color: var(--color-background);
+    max-width: 1600px;
+    margin: auto auto;
+        @include for-desktop-up {
+            height: 600px;
+            background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/studio-bcg-hero.jpg);}
+
+        @include for-tablet-up{
+            height: 400px;
+            background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/studio-bcg-hero-tablet.jpg);
+        }
+        @include for-phone-up{
+            height: 400px;
+            background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/studio-bcg-hero-mobile.jpg);
+        }
+        
+        @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+            screen and (min-resolution: 192dpi) and (max-width: 767px),
+            screen and (min-resolution: 2dppx) and (max-width: 767px) {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(../images/studio-bcg-hero-mobile@x2.jpg);
+            }
+            @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+            screen and (min-resolution: 192dpi) and (min-width: 768px),
+            screen and (min-resolution: 2dppx) and (min-width: 768px) {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(../images/studio-bcg-hero-tablet@x2.jpg);
+            }
+        
+            @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+            screen and (min-resolution: 192dpi) and (min-width: 1200px),
+            screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(../images/studio-bcg-hero@x2.jpg);
+            }
+
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+    &__container{
+    @include for-desktop-up{
+
+    }
+    @include for-tablet-up{
+        padding: 118px 204px;
+    }
+    @include for-phone-up{
+
+    }
+}
+    &__title {
+        color: var(--color-white);
+        font-size: 44px;
+        line-height: 1.36;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin: 0 auto 30px auto;
+        max-width: 696px;
+        
+        @media (max-width:1200px) {
+            font-size: 26px;
+            line-height: 1.61;
+        }
+    }
+
+    &__button {
+        color: #fff;
+        background-color: #2196f3;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        font-family: 'Roboto';
+        border-radius: 4px;
+        border: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        padding: 10px 32px;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+}

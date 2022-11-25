@@ -1,0 +1,17 @@
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    
+        @include for-desktop-up{
+            width: 1200px;
+        }
+        @include for-tablet-up {
+            width: 768px;
+        }
+        @include for-phone-up {
+            width: 480px;
+        }
+        @media (max-width:479px){
+            width:100%
+        }
+}
